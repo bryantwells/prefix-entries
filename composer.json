@@ -1,0 +1,41 @@
+{
+    "name": "bryantwells/prefix-entries",
+    "description": "Prefix selected elements in the entries field with parent names",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "prefix entries"
+    ],
+    "support": {
+        "docs": "https://github.com/bryantwells/prefix-entries/blob/master/README.md",
+        "issues": "https://github.com/bryantwells/prefix-entries/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bryant Wells",
+            "homepage": "github.com/bryantwells"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "bryantwells\\prefixentries\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Prefix Entries",
+        "handle": "prefix-entries",
+        "developer": "Bryant Wells",
+        "developerUrl": "github.com/bryantwells",
+        "documentationUrl": "https://github.com/bryantwells/prefix-entries/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/bryantwells/prefix-entries/master/CHANGELOG.md",
+        "class": "bryantwells\\prefixentries\\PrefixEntries"
+    }
+}
