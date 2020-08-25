@@ -9,7 +9,6 @@
  */
 
 function prefixEntries(settings) {
-
     settings.fieldTypes.forEach((fieldType, i) => {
         // create selector from settings passed by the plugin
         const selector = `.field[data-type="${fieldType}"]`;
