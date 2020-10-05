@@ -58,8 +58,10 @@ class PrefixEntriesField {
     editEntryElement(entryElement) {
         // edit the entry element
         const entryObject = this.settings.entries.find(entry => entry.id == entryElement.dataset.id);
-        const newEntryTitle = this.prefixEntryTitle(entryObject.title, entryObject);
-        entryElement.querySelector('.title').innerText = newEntryTitle;
+        if (entryObject) {
+            const newEntryTitle = this.prefixEntryTitle(entryObject.title, entryObject);
+            entryElement.querySelector('.title').innerText = newEntryTitle;
+        }
     }
 
     prefixEntryTitle(title, entryObject) {
