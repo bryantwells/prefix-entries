@@ -10,6 +10,7 @@
 
 function prefixEntries(settings) {
     settings.fieldTypes.forEach((fieldType, i) => {
+
         // create selector from settings passed by the plugin
         const selector = `.field[data-type="${fieldType}"]`;
 
@@ -34,6 +35,7 @@ class PrefixEntriesField {
     }
 
     init() {
+
         // observe parent element for changes in selected entries list
         this.observer.observe(
             this.element.querySelector(`.elements`), 
@@ -65,10 +67,15 @@ class PrefixEntriesField {
     }
 
     prefixEntryTitle(title, entryObject) {
+        
         // (recursive) prepend the entries parent(s) to the title
         if (entryObject.parentId) {
-            const parentObject = this.settings.entries.find(entry => entry.id === entryObject.parentId)
-            return this.prefixEntryTitle(`${parentObject.title} > ${title}`, parentObject);
+            const parentObject = this.settings.entries.find(entry => entry.id === entryObject.parentId);
+            if (parentObject) {
+                return this.prefixEntryTitle(`${parentObject.title} > ${title}`, parentObject);
+            } else {
+                return title
+            }            
         } else {
             return title;
         }
