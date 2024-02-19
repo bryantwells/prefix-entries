@@ -54,7 +54,7 @@ class PrefixEntries extends Plugin
     /**
      * @var bool
      */
-    public $hasCpSettings = false;
+    public bool $hasCpSettings = false;
 
     /**
      * @var bool
