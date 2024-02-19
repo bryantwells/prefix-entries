@@ -28,6 +28,6 @@ class Settings extends Model
     /**
      * @var string
      */
-    public $fieldTypes = [];
+    public array $fieldTypes = [];
 
 }
