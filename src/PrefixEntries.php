@@ -49,12 +49,12 @@ class PrefixEntries extends Plugin
     /**
      * @var string
      */
-    public string $schemaVersion = '1.0.0';
+    public $schemaVersion = '1.0.0';
 
     /**
      * @var bool
      */
-    public bool $hasCpSettings = false;
+    public $hasCpSettings = false;
 
     /**
      * @var bool
