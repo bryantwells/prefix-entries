@@ -12,6 +12,7 @@ namespace bryantwells\prefixentries;
 
 use Craft;
 use craft\base\Plugin;
+use craft\base\Model;
 use craft\services\Plugins;
 use craft\events\PluginEvent;
 use craft\elements\Entry;
@@ -117,7 +118,7 @@ class PrefixEntries extends Plugin
     /**
      * @inheritdoc
      */
-    protected function createSettingsModel()
+    protected function createSettingsModel(): ?Model
     {
         return new Settings();
     }

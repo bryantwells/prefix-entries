@@ -10,9 +10,6 @@
 
 namespace bryantwells\prefixentries\models;
 
-use bryantwells\prefixentries\PrefixEntries;
-
-use Craft;
 use craft\base\Model;
 
 /**
@@ -26,8 +23,8 @@ class Settings extends Model
     // =========================================================================
 
     /**
-     * @var string
+     * @var array
      */
-    public array $fieldTypes = [];
+    public $fieldTypes = [];
 
 }
